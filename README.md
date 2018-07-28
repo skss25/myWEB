@@ -1,5 +1,5 @@
 # myWEB
-It's my personal blog made by HTML5,  CSS3, Vanilla JS, JSP & Servlet to practice practice Vanilla JS and Server-Side lang
+It's my personal blog made by HTML5,  CSS3, Vanilla JS, JSP & Servlet to practice Vanilla JS and Server-Side lang
 
 (It will be updated as soon as possible)
 
