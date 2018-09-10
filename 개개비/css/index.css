@@ -2,13 +2,37 @@
     padding: 0px;
     margin: 0px;
 }
+
+li{
+    list-style-type: none;
+}
 html{
     height: 100%;
 }
+
 #top{
     color:white;
     background-color: blue;
-    height:180px;
+    width: 100%;
+    height: 180px;
+}
+
+#top .m-img{
+    width:100%;
+    overflow: hidden;
+}
+
+.top-imgs > li{
+    width:25%;
+}
+
+.top-imgs li > img{    
+    width: 100%;
+    height: 180px;
+}
+
+#top .m-img .canvas .top-imgs > li{
+    float:left;
 }
 
 #profile{
@@ -30,6 +54,44 @@ html{
 
 #bottom{
     color:white;
-    background-color: red;
+    background-color: grey;
     height: 100%;
+}
+
+#bottom .wrapper{
+    width:75%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+#bottom .wrapper .text-container{
+    width: 75%;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+}
+
+.text-header{
+    border-bottom: 1px solid black;
+}
+.text-header > h3{
+    padding:20px;
+}
+
+.text-area .text-list > li{
+    margin: 10px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding:20px;
+}
+
+.text-nav{
+    border-top: 1px solid black;
+    text-align: center;
+
+    padding: 20px;
+}
+
+.text-nav .nav-btns > li{
+    display: inline-block;
 }
