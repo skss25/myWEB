@@ -1,0 +1,35 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    height: 100%;
+}
+#top{
+    color:white;
+    background-color: blue;
+    height:180px;
+}
+
+#profile{
+    position: absolute;
+    top: 100px;
+    left: 60px;
+}
+
+#profile .profile-space{
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#profile .profile-space .profile-opt{
+    padding: 10px;
+    text-align: center;
+}
+
+#bottom{
+    color:white;
+    background-color: red;
+    height: 100%;
+}
