@@ -1,0 +1,128 @@
+/*Import 구문 예제*/
+/*https://www.w3schools.com/cssref/pr_import_rule.asp*/
+@import url('./index.css');
+
+*{
+    margin:0px;
+    padding:0px;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #656464;
+}
+
+#main-wrap{
+    width: 85%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#main-header{
+    overflow: hidden;
+    background-color: #4a4848;
+}
+
+#main-header .main-title{
+    float:left;
+}
+
+#main-header .main-option{
+    float:right;
+}
+
+#main-header .main-option ul > li{
+    display: inline-block;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+/*Navigation*/
+
+#main-navigation {
+    background-color: red;
+    margin: 20px 0px;
+}
+
+#main-navigation ul{
+    overflow: hidden;
+}
+
+#main-navigation ul li{
+    float:left;
+    text-align: center;
+
+    border: 1px solid black;
+    box-sizing: border-box;
+    width:16.6666%;
+    padding:20px;
+    background-color: gray;
+}
+
+#main-navigation ul li > a{
+    color: white;
+}
+
+/*Section*/
+#main-section{
+    background-color: brown;
+}
+
+#main-section .section-wrap{
+    padding: 0px 20px;
+}
+
+/*슬라이더 쇼 샘플입니다. 슬라이더 구현시 변경해야 합니다.*/
+#main-section .slider-wrap .slider{
+    width:100%;
+    background-color: black;
+}
+
+#main-section .slider-wrap .slider .slider-canvas{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+
+    background-color: white;
+}
+
+/*Footer*/
+#main-footer{
+    background-color: chartreuse;
+    margin:20px 0px;
+}
+
+#main-footer .site-info .link-wrap{
+    width:100%;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+#main-footer .site-info .link-wrap ul{
+    display: inline;
+}
+
+#main-footer .site-info .link-wrap ul > li{
+      display: inline-block;
+      margin: 0px 10px;
+}
+
+#main-footer .site-info .link-wrap ul > li:nth-child(2){
+    padding:0px 20px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+
+
+#main-footer .site-info-address{
+    text-align: center;
+}
