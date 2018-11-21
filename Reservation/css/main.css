@@ -1,6 +1,6 @@
 /*Import 구문 예제*/
 /*https://www.w3schools.com/cssref/pr_import_rule.asp*/
-@import url('./index.css');
+@import url('./List.css');
 
 *{
     margin:0px;
@@ -17,7 +17,7 @@ a{
 }
 
 body{
-    background-color: #656464;
+    background-color: #727272;
 }
 
 #main-wrap{
@@ -64,7 +64,7 @@ body{
     box-sizing: border-box;
     width:16.6666%;
     padding:20px;
-    background-color: gray;
+    background-color: #474747;
 }
 
 #main-navigation ul li > a{
@@ -91,12 +91,12 @@ body{
     margin: 0 auto;
     text-align: center;
 
-    background-color: white;
+    background-color: rgb(141, 63, 63);
 }
 
 /*Footer*/
 #main-footer{
-    background-color: chartreuse;
+    background-color: #5c6356;
     margin:20px 0px;
 }
 

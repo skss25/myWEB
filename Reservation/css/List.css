@@ -1,0 +1,11 @@
+.movie-wrap{
+    position: relative;
+}
+
+.movie-wrap .movie-info{
+    position: absolute;
+    top:0px;
+    left: 320px;
+
+    background-color: aqua;
+}
