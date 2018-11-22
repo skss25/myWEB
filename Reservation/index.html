@@ -9,10 +9,12 @@
         <div id="main-wrap">
         <!-- 상단 (로고, 로그인, 검색)-->
         <header id="main-header">
-            <div class="main-title">영화 예매 사이트</div>
+            <div class="main-title">
+                <h1>GGV</h1>
+            </div>
             <div class="main-option">
                 <ul>
-                    <li><a href="#">로그인</a></li>
+                    <li><input type="button" value="로그인"/></li>
                     <li>
                         <input value="검색"/>
                         <input type="button" value="제출"/>
@@ -27,7 +29,17 @@
                 <!-- JavaScript로 Tab UI 적용-->
                 <li><a href="#">영화</a></li>
                 <li><a href="#">홈</a></li>
-                <li><a href="#">상영작 * 예정작</a></li>
+                <li>
+                    <a href="#" class="nav-btn">상영작 * 예정작</a>
+                    <div class="cont-nav">
+                        <div class="cont-box">
+                            <div class="cont-opt1">현재 상영영화</div>
+                            <div class="cont-opt2">개봉 예정영화</div>
+                            <div class="cont-opt3">TV/DVD 영화</div>
+                            <div class="cont-opt4">예고편</div>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="#">예매</a></li>
                 <li><a href="#">평점 * 리뷰</a></li>
                 <li><a href="#">다운로드</a></li>
@@ -40,7 +52,7 @@
             <div class="slider-wrap">
                 <div class="slider">
                     <div class="slider-canvas">
-                        <h1>슬라이드 쇼입니다.</h1>
+                        <img src="./sample/imgs/movie_image.jpg" alt="">
                     </div>
                 </div>
             </div>
