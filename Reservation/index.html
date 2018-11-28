@@ -3,8 +3,40 @@
         <meta charset="UTF-8">
         <title>영화 예매 페이지</title>
         <link rel="stylesheet" href="./css/main.css">
-        
-    </head>
+        <!-- 
+            HTML도 CSS, JS처럼 불러오자!
+            참고: https://www.html5rocks.com/ko/tutorials/webcomponents/imports/
+            참고: http://beableto.tistory.com/entry/html-in-html-html%EC%97%90%EC%84%9C-html%EC%9D%84-%EB%B6%88%EB%9F%AC%EC%98%A4%EC%9E%90
+        -->
+        <link rel="import" href="./List.html">
+        <script type="text/javascript">
+            /*This is a sample code to import HTML files. */
+            /*There is an error when you access to local file system.
+
+            function  supportsImports(){
+                return 'import' in document.createElement('link');
+            }
+            
+            
+            if(supportsImports()){
+                let sectionCotainer = document.querySelector("#main-section .secction-wrap");
+            
+                let link = document.createElement('link');
+                link.rel='import';
+                link.href="./List.html";
+                link.onload=function(e){
+                    
+                    let loadHtmlFile=this.import.querySelector('html');
+                    let sectionContainer=document.querySelector("#main-section .section-wrap");
+                    sectionContainer.appendChild(loadHtmlFile.cloneNode(true));
+                }
+            }else{
+                alert("Link Import를 지원하지 않습니다.");
+            }
+            */
+        </script>
+        <script></script>
+        </head>
     <body>
         <div id="main-wrap">
         <!-- 상단 (로고, 로그인, 검색)-->
@@ -31,16 +63,22 @@
                 <li><a href="#">홈</a></li>
                 <li>
                     <a href="#" class="nav-btn">상영작 * 예정작</a>
-                    <div class="cont-nav">
-                        <div class="cont-box">
-                            <div class="cont-opt1">현재 상영영화</div>
-                            <div class="cont-opt2">개봉 예정영화</div>
-                            <div class="cont-opt3">TV/DVD 영화</div>
-                            <div class="cont-opt4">예고편</div>
-                        </div>
+                    <div class="dropDown-contents">
+                            <a href="#">현재 상영영화</a>
+                            <a href="#">개봉 예정영화</a>
+                            <a href="#">TV/DVD 영화</a>
+                            <a href="#">예고편</a>
                     </div>
                 </li>
-                <li><a href="#">예매</a></li>
+                <li>
+                    <a href="#">예매</a>
+                    <div class="dropDown-contents">
+                            <a href="#">현재 상영영화</a>
+                            <a href="#">개봉 예정영화</a>
+                            <a href="#">TV/DVD 영화</a>
+                            <a href="#">예고편</a>
+                    </div>
+                </li>
                 <li><a href="#">평점 * 리뷰</a></li>
                 <li><a href="#">다운로드</a></li>
             </ul>
@@ -61,48 +99,8 @@
             
 <!-- 탭에 따라서 내용이 표시되는 곳-->
 <!-- 테이블로 영화 정보를 변경해보도록 해보세요. 프로젝트 개요서 참고-->
-<div class="section-wrap">
-    <div class="movie-list-wrapper">
-        <div class="movie-list-title">
-            <h1 class="list-title">현재상영영화</h1>
-        </div>
-
-        <div class="movie-list-tab">
-            <ul class="list-array-option">
-                <li>예매순</li>
-                <li>평점순</li>
-                <li>개봉순</li>
-            </ul>
-        </div>
-
-        <div class="movie-list">
-
-            <div class="movie-wrap">
-                <div class="movie-img">
-                    <img src="https://images.unsplash.com/photo-1542765570-2d49240a9a92?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8867eddb07496b2ca1d84bca492840&auto=format&fit=crop&w=1350&q=80" alt=""
-                    width="300" height="200">
-                </div>
-
-                <div class="movie-info">
-                    <div class="movie-info-list">
-                        <div class="info-rating">
-                            네티즌 평점/예매율
-                        </div>
-                        <div class="info-genre">
-                            드라마/134분/2018.10.31 개봉
-                        </div> 
-                        <div class="info-cast">
-                            <div class="info-director"></div>
-                            <div clsas="info-actor"></div>
-                        </div>
-                    </ul>
-                </div>
-                
+            <div class="section-wrap">
             </div>
-        </div>
-        <div class="movie-chart">인기 영화 순위입니다.</div>
-    </div>
-</div>
             
         </section>
 
@@ -112,7 +110,7 @@
                 <div class="site-info-link">
                     <div class="link-wrap">
                             <ul>
-                                    <li><a href="#">이용약관</a></li>
+                                    <li><a href="">이용약관</a></li>
                                     <li><a href="#">개인정보처리방침</a></li>
                                     <li><a href="#">고객센터</a></li>
                                 </ul>
@@ -125,5 +123,17 @@
             </div>
         </footer>
         </div>
+
+        <script>
+            let link = document.querySelector("link[rel='import']");
+            let content = link.import;
+            
+            console.log(link);
+            console.log(content);
+            let sectionWrap = content.querySelector(".movie-list-wrapper");
+            let sectionContainer = document.querySelector("#main-section .section-wrap");
+
+            sectionContainer.appendChild(sectionWrap.cloneNode(true));
+        </script>
     </body>
 </html>

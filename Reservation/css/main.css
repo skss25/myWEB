@@ -21,7 +21,7 @@ body{
 }
 
 #main-wrap{
-    width: 85%;
+    width: 1080px;
     margin: 0 auto;
 }
 
@@ -62,7 +62,7 @@ body{
 #main-navigation ul li{
     float:left;
     box-sizing: border-box;
-    width:16.6666%;
+    width: 180px;
 }
 
 #main-navigation ul li > a{
@@ -73,31 +73,42 @@ body{
     width:100%;
     padding:20px;
     color:white;
-    
-    border-left: 1px solid slategray;
-    border-right: 1px solid slategray;
+
     background-color: #474747;
 }
+
 /*
-드롭 다운 메뉴
+드롭 다운 메뉴 ***** position에 대한 이해 필요
 참고: https://www.w3schools.com/howto/howto_css_dropdown.asp
+
+박스 쉐도우잉
+참고: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
 */
-#main-navigation ul li .cont-nav{
-    position: relative;
-}
 
-#main-navigation ul li .cont-nav .cont-box{
 
-}
-
-#main-navigation ul li .cont-nav .cont-box > div[class |= "cont"]{
-    box-sizing: border-box;
-    padding: 10px 20px 10px 20px;
-    border: 1px solid black;
+#main-navigation ul li .dropDown-contents{
+    position: absolute;
+    display: none;
     background-color: #474747;
+
+    box-sizing: border-box;
+    box-shadow: 5px 10px 30px;
+    width: 180px;
 }
 
+#main-navigation .dropDown-contents > a{
+    display: block;
+    color: white;
+    padding:20px;
+}
 
+#main-navigation .dropDown-contents > a:hover{
+    background-color: #7a7979;
+}
+
+#main-navigation ul > li:hover .dropDown-contents{
+    display: block;
+}
 /*Section*/
 #main-section{
     background-color: whitesmoke;
@@ -145,8 +156,6 @@ body{
     border-left: 2px solid black;
     border-right: 2px solid black;
 }
-
-
 
 #main-footer .site-info-address{
     text-align: center;
